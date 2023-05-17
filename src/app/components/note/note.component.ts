@@ -16,10 +16,7 @@ export class NoteComponent {
   }
 
   addNote(item: string){
-    if (!this.text) {
-      alert('Please add a task!');
-      return;
-    }
+   
 
 
       while(this.i < this.notes.length){
