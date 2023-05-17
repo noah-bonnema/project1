@@ -1,18 +1,24 @@
 <div>
   <h1>{{ title }}</h1>
-  <form (ngSubmit)="onSubmit()">
+  <form>
     <div>
       <label for="text"> Note: </label>
       <input
         type="text"
-        name="text"
+        name="input-text"
         placeholder="new note"
+        #txt
       />
+      <button  (click)="addNote(txt)"> save note </button>
+      
+      
     </div>
-    <input type="submit" value="Save Note" />
-    <label for="checkbox"> please:</label>
-  <input type="checkbox" />
+   
   </form>
+  <p>
+    {{text}}
+  </p>
   
+
 </div>
 
