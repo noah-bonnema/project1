@@ -8,10 +8,10 @@
       #box
       
     />
-    <button (click)="addNote(box.value)" (click)="getText()"> save note </button>
+    <button (click)="addNote(box.value)" > save note </button>
 
     
   </div>
-  <p >
-    {{text}}
-  </p>
+  <div *ngFor="let item of notes">
+    {{item}}
+  <div>

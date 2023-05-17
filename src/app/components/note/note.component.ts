@@ -16,24 +16,18 @@ export class NoteComponent {
   }
 
   addNote(item: string){
-    if(item != ''){
+    
       while(this.i < this.notes.length){
         this.i++;
         console.log(this.i);
       }
-      this.notes[this.i-1] = item;
+      this.notes[this.i] = "- " + item;
     } 
-    else{
-      alert('Please add a note')
-    }
+   
     
   }
 
-  getText(){
-    for (var j = 0; j < this.notes.length; j++){
-      this.text += this.notes[j];
-      }
-  }
+  
 
 
-}
+
