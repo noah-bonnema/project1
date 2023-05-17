@@ -1,24 +1,8 @@
 <div>
   <h1>{{ title }}</h1>
-  <form>
-    <div>
-      <label for="text"> Note: </label>
-      <input
-        type="text"
-        name="input-text"
-        placeholder="new note"
-        #txt
-      />
-      <button  (click)="addNote(txt)"> save note </button>
-      
-      
-    </div>
-   
-  </form>
-  <p>
-    {{text}}
-  </p>
-  
-
+  <app-note>
+  </app-note>
 </div>
+
+
 

@@ -13,18 +13,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 export class AppComponent {
   title = 'Really Exciting Notes App';
-  text = "- this is the first note";
+
 name: any;
 
   
-  getTextBoxVal(item: any) {
-    alert(item.value);
-    
-  }
-
-  addNote(item: any){
-   this.text = this.text + "\n-"+ item.value
-  }
-
+  
   
 }

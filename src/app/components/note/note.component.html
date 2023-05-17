@@ -1,0 +1,16 @@
+<div>
+    <label for="text"> Note: </label>
+    <input
+      type="text"
+      name="input-text"
+      placeholder="new note"
+      #box
+      (keyup)="addNote(box.value)"
+    />
+    <button (click)="addNote(box.value)"> save note </button>
+
+    
+  </div>
+  <p>
+    {{" - " + text}}
+  </p>
