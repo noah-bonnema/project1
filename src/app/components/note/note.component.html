@@ -15,16 +15,22 @@
 
 <div>
     <label for="text"> Add note: </label>
-    <input type="text" width="auto" name="input-text" placeholder="new note" #box />
+    <input type="text" onClick="(this.value='')"  width="auto" name="input-text" placeholder="new note" #box />
     <button (click)="addNote(box.value)"> save note </button>
 
-    <button> delete a note </button>
+    
+
+</div>
+<div>
+    <label for="text"> Delete note: </label>
+    <input type="text" onClick="(this.value='')"  width="auto" name="delete-text" placeholder="note # to delete" #box2 />
+    <button (click)="deleteNote(box2.value)"> delete a note </button>
 
 </div>
 
 <h1>
     List:
 </h1>
-<p *ngFor="let item of notes">
-    {{item}}
+<p *ngFor='let item of notes; let indexOfElement =index'>
+    {{(indexOfElement +1)+ ") "}}  {{item}}
 <p>

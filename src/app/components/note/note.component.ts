@@ -11,11 +11,6 @@ export class NoteComponent {
   i: number = 0;
   introText: string = '';
 
-  getTextBoxVal(item: string) {
-    alert("new note: '" + item + "' was added.");
-
-  }
-
   addNote(item: string) {
     if (item == "") {
       alert("please enter a note");
@@ -23,22 +18,25 @@ export class NoteComponent {
       while (this.i < this.notes.length) {
         this.i++;
       }
-      this.notes[this.i] = (this.i+1) + ") " + item;
+      this.notes[this.i] = item;
     }
+
+    item = "";
   }
 
-  deleteNote() {
-    this.notes[this.i] = "";
-  }
-
-  isListPopulated(){
-    if(this.notes[0] = ''){
-      return false;
+  deleteNote(num: string) {
+    const n = parseInt(num);
+    if (Number.isNaN(n)) {
+      alert("please enter a number")
+    }
+    else if (this.notes[n - 1] == null) {
+      alert("please enter a valid note number");
     } else {
-      return true;
+      this.notes[n - 1] = "";
+      this.notes.splice(n,1);
+      console.log(this.notes.toString());
     }
   }
-
 }
 
 
