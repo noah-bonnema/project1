@@ -17,9 +17,6 @@
     <label for="text"> Add note: </label>
     <input type="text" onClick="(this.value='')"  width="auto" name="input-text" placeholder="new note" #box />
     <button (click)="addNote(box.value)"> save note </button>
-
-    
-
 </div>
 <div>
     <label for="text"> Delete note: </label>
@@ -33,4 +30,5 @@
 </h1>
 <p *ngFor='let item of notes; let indexOfElement =index'>
     {{(indexOfElement +1)+ ") "}}  {{item}}
+    
 <p>

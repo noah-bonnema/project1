@@ -37,6 +37,10 @@ export class NoteComponent {
       console.log(this.notes.toString());
     }
   }
+
+  getText(){
+    this.notes.toString();
+  }
 }
 
 
