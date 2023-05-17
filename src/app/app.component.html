@@ -1,15 +1,17 @@
 <div>
-  <app-header>
-  </app-header>
-  <app-note>
-  </app-note>
-  <app-footer>
-
-  </app-footer>
- 
+  <h1>{{ title }}</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="text"> Note: </label>
+      <input
+        type="text"
+        name="text"
+        placeholder="new note"
+      />
+    </div>
+    <input type="submit" value="Save Note" />
+    <label for="checkbox"> please:</label>
+  <input type="checkbox" />
+  </form>
 </div>
-  
-
-
-
 
