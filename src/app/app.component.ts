@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'noah-abril-project1';
+  title = 'Really Exciting Notes App';
+  text!: string;
+
+  onSubmit() {
+    alert(this.text);
+  }
+  
 }
