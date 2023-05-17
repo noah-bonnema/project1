@@ -9,6 +9,7 @@ export class NoteComponent {
   notes: string[] = [];
   text: string = '';
   i: number = 0;
+  introText: string = '';
 
   getTextBoxVal(item: string) {
     alert("new note: '" + item + "' was added.");
@@ -22,12 +23,20 @@ export class NoteComponent {
       while (this.i < this.notes.length) {
         this.i++;
       }
-      this.notes[this.i] = "- " + item;
+      this.notes[this.i] = (this.i+1) + ") " + item;
     }
   }
 
   deleteNote() {
     this.notes[this.i] = "";
+  }
+
+  isListPopulated(){
+    if(this.notes[0] = ''){
+      return false;
+    } else {
+      return true;
+    }
   }
 
 }
