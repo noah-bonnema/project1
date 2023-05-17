@@ -1,17 +1,10 @@
 <div>
-    <label for="text" > Add note: </label>
-    <input
-      type="text"
-      width="auto"
-      name="input-text"
-      placeholder="new note"
-      #box
-      
-    />
-    <button (click)="addNote(box.value)" > save note </button>
+    <label for="text"> Add note: </label>
+    <input type="text" width="auto" name="input-text" placeholder="new note" #box />
+    <button (click)="addNote(box.value)"> save note </button>
 
-    
-  </div>
-  <div *ngFor="let item of notes">
+
+</div>
+<div *ngFor="let item of notes">
     {{item}}
-  <div>
+    <div>

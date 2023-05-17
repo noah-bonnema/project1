@@ -14,9 +14,4 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 export class AppComponent {
   title = 'Really Exciting Notes App';
 
-name: any;
-
-  
-  
-  
 }
