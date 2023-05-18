@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NoteItemComponent } from '../note-item/note-item.component';
 
 @Component({
   selector: 'app-note',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./note.component.css']
 })
 export class NoteComponent {
-  notes: string[] = [];
+  notes: NoteItemComponent[] = [];
   text: string = '';
   i: number = 0;
   introText: string = '';
@@ -18,7 +19,10 @@ export class NoteComponent {
       while (this.i < this.notes.length) {
         this.i++;
       }
-      this.notes[this.i] = item;
+      const note1 = new NoteItemComponent; 
+      const note2 = note1.createNote(item,this.i);
+      this.notes[this.i] = note2;
+      console.log(this.notes[this.i].noteText);
     }
 
     item = "";
@@ -32,7 +36,7 @@ export class NoteComponent {
     else if (this.notes[n - 1] == null) {
       alert("please enter a valid note number");
     } else {
-      this.notes[n - 1] = "";
+      this.notes[n - 1].noteText = "";
       this.notes.splice(n,1);
       console.log(this.notes.toString());
     }
