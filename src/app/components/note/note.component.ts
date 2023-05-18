@@ -25,7 +25,7 @@ export class NoteComponent {
         n++;
       }
       const note1 = new NoteItemComponent;
-      const note2 = note1.createNote(item, n);
+      const note2 = note1.createNote(item, n + 1);
       this.notes[n] = note2;
 
     }
@@ -44,15 +44,23 @@ export class NoteComponent {
     }
 
     let j = 0;
-    while (j <= this.notes.length) {
-      if(this.notes[j].noteId == n){
+    while (j < this.notes.length) {
+      if (this.notes[j].noteId == n) {
         //this is the note to delete
-        this.notes.splice(n,1);
-        alert("note at number "+ n +" was removed");
+        this.notes.splice(n - 1, 1);
+        alert("note at number " + n + " was removed");
+
+        //now need to update the id's for all the subsequent notes
+        let w = j;
+        while (w < this.notes.length) {
+          this.notes[w].noteId--;
+          w++;
+        }
+
       }
       j++;
     }
-   
+
 
   }
 
