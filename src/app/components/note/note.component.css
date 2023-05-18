@@ -9,3 +9,14 @@ div{
     color:#ffd89b;
 
 }
+
+input[type="text"] {
+    border:solid 1px var(rgb(194, 243, 194));
+    padding: 7px;
+    border-radius: 18px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    display: inline-block;
+    width: 40%;
+    background-color:rgb(166, 211, 166);
+  }
