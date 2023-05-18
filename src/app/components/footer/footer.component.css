@@ -10,4 +10,6 @@ div{
     align-self: center;
     align-content: center;
     animation: mymove 5s infinite;
+    margin-left:30%;
+
 }

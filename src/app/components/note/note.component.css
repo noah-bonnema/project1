@@ -19,6 +19,7 @@ input[type="text"] {
     display: inline-block;
     width: 39%;
     background-color:rgb(166, 211, 166);
+    
   }
 
  h1{
@@ -27,26 +28,40 @@ input[type="text"] {
         border-style: dotted;
         border-width: 2cqmin;
         border-radius: 0cqmax;
-        width:80cqmax;
+        width:77cqmax;
+        padding-left: 3cqmax;
+        padding-top: 1cqmax;
         block-size: 10cqmin;
         align-items: center;
         align-self: center;
         align-content: center;
+        margin-left:4%
+
+
 
   }
 
   p{
     color:rgb(62, 87, 62);
+    word-spacing: 1cqmax;
+    
+
         border-style: dotted;
         border-width: 2cqmin;
         border-bottom-width: 0cqmax;
         border-top-width: 0cqmax;
         border-radius: 0cqmax;
-        width:80cqmax;
+        padding-left: 3cqmax;
+        width:77cqmax;
         block-size: 10cqmin;
         align-items: center;
         align-self: center;
         align-content: center;
+        margin-left:4%
+        
+
+
+
   }
   h2{
     color:rgb(62, 87, 62);
@@ -60,4 +75,7 @@ input[type="text"] {
         align-items: center;
         align-self: center;
         align-content: center;
+        
+        margin-left:4%
+
   }
