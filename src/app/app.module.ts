@@ -7,6 +7,8 @@ import { NoteComponent } from './components/note/note.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NoteItemComponent } from './components/note-item/note-item.component';
+
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     HeaderComponent,
     FooterComponent,
+    NoteItemComponent,
+
   ],
   imports: [
     BrowserModule
