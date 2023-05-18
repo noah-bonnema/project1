@@ -18,7 +18,7 @@ export class NoteComponent {
       alert("please enter a note");
     } else {
       while (n < this.notes.length) {
-        if(this.notes[n].noteText == item){
+        if (this.notes[n].noteText == item) {
           alert("you can not add two notes with the same text");
           return;
         }
@@ -27,7 +27,7 @@ export class NoteComponent {
       const note1 = new NoteItemComponent;
       const note2 = note1.createNote(item, n);
       this.notes[n] = note2;
-      console.log(this.notes[n].noteText + this.notes[n].noteId);
+
     }
 
     item = "";
@@ -44,14 +44,12 @@ export class NoteComponent {
     }
 
     let j = 0;
-    while (j < this.notes.length) {
-      if(this.notes[j].noteId == j){
-        //this is the element to remove
-        alert("element at " + (j+1) +" removed");
-        this.notes = this.notes.splice(j-1,1);
-      }
+    while (j <= this.notes.length) {
+      console.log("id: " + this.notes[j].noteId + " j: " + j);
+     
       j++;
     }
+    console.log(j);
 
   }
 
