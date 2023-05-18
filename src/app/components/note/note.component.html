@@ -12,23 +12,27 @@
         text-align: left
     }
 </style>
+<div style="border: medium solid aquamarine; padding: 20px; " >
+    <div>
+        <label for="text"> Add note: </label>
+        <input type="text" onClick="(this.value='')" width="auto" name="input-text" placeholder="new note" #box />
+        <button (click)="addNote(box.value)"> save note </button>
+    </div>
+    <div>
+        <label for="text"> Delete note: </label>
+        <input type="text" onClick="(this.value='')" width="auto" name="delete-text" placeholder="note # to delete"
+            #box2 />
+        <button (click)="deleteNote(box2.value)"> delete a note </button>
 
-<div>
-    <label for="text"> Add note: </label>
-    <input type="text" onClick="(this.value='')"  width="auto" name="input-text" placeholder="new note" #box />
-    <button (click)="addNote(box.value)"> save note </button>
+    </div>
 </div>
-<div>
-    <label for="text"> Delete note: </label>
-    <input type="text" onClick="(this.value='')"  width="auto" name="delete-text" placeholder="note # to delete" #box2 />
-    <button (click)="deleteNote(box2.value)"> delete a note </button>
 
+<div style="border: medium solid aquamarine; padding: 20px; ">
+    <h1>
+        List:
+    </h1>
+    <p *ngFor='let item of notes; let indexOfElement =index'>
+        {{(indexOfElement +1)+ ") "}} {{item}}
+
+    <p>
 </div>
-
-<h1>
-    List:
-</h1>
-<p *ngFor='let item of notes; let indexOfElement =index'>
-    {{(indexOfElement +1)+ ") "}}  {{item}}
-    
-<p>
