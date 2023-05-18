@@ -1,3 +1,13 @@
-p{
-    color:rgb(62, 87, 62)
+
+
+div{
+    color:rgb(62, 87, 62);
+    border-style: dotted;
+    border-width: -1cqmin;
+    border-radius: 0cqmax;
+    width:40cqmax;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    animation: mymove 5s infinite;
 }

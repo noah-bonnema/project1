@@ -6,7 +6,7 @@ border-color: rgb(171, 216, 171);
 }
 
 div{
-    color:#ffd89b;
+    color:rgb(62, 87, 62);
 
 }
 
@@ -19,4 +19,18 @@ input[type="text"] {
     display: inline-block;
     width: 39%;
     background-color:rgb(166, 211, 166);
+  }
+
+  h1{
+    
+        color:rgb(62, 87, 62);
+        border-style: dotted;
+        border-width: 2cqmin;
+        border-radius: 0cqmax;
+        width:80cqmax;
+        block-size: 25cqmin;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+
   }
