@@ -13,36 +13,49 @@ export class NoteComponent {
   introText: string = '';
 
   addNote(item: string) {
+    let n = 0;
     if (item == "") {
       alert("please enter a note");
     } else {
-      while (this.i < this.notes.length) {
-        this.i++;
+      while (n < this.notes.length) {
+        if(this.notes[n].noteText == item){
+          alert("you can not add two notes with the same text");
+          return;
+        }
+        n++;
       }
-      const note1 = new NoteItemComponent; 
-      const note2 = note1.createNote(item,this.i);
-      this.notes[this.i] = note2;
-      console.log(this.notes[this.i].noteText);
+      const note1 = new NoteItemComponent;
+      const note2 = note1.createNote(item, n);
+      this.notes[n] = note2;
+      console.log(this.notes[n].noteText + this.notes[n].noteId);
     }
 
     item = "";
+
   }
 
   deleteNote(num: string) {
     const n = parseInt(num);
     if (Number.isNaN(n)) {
       alert("please enter a number")
-    }
-    else if (this.notes[n - 1] == null) {
+      return;
+    } else if (this.notes[n - 1] == null) {
       alert("please enter a valid note number");
-    } else {
-      this.notes[n - 1].noteText = "";
-      this.notes.splice(n,1);
-      console.log(this.notes.toString());
     }
+
+    let j = 0;
+    while (j < this.notes.length) {
+      if(this.notes[j].noteId == j){
+        //this is the element to remove
+        alert("element at " + (j+1) +" removed");
+        this.notes = this.notes.splice(j-1,1);
+      }
+      j++;
+    }
+
   }
 
-  getText(){
+  getText() {
     this.notes.toString();
   }
 }
