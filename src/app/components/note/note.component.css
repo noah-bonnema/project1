@@ -1,9 +1,40 @@
 button{
+  cursor:pointer;
+ 
+  
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color:transparent;
+
+
 background: linear-gradient(90deg, #ffd89b,rgb(114, 248, 181));
 color:darkseagreen;
 border-radius:  40px; 
 border-color: rgb(171, 216, 171);
 }
+.example-ripple-container {
+  cursor: pointer;
+  text-align: center;
+
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
 
 div{
     color:rgb(62, 87, 62);
@@ -24,7 +55,8 @@ input[type="text"] {
 
  h1{
     
-        color:rgb(62, 87, 62);
+ 
+  color:rgb(62, 87, 62);
         border-style: dotted;
         border-width: 2cqmin;
         border-radius: 0cqmax;
@@ -36,6 +68,7 @@ input[type="text"] {
         align-self: center;
         align-content: center;
         margin-left:4%
+        
 
 
 
