@@ -8,9 +8,18 @@
         text-align: left
     }
 
+    u {
+        text-align: left
+    }
+
+    b {
+        text-align: left
+    }
+
     h1 {
         text-align: left
     }
+
     h2 {
         text-align: left
     }
@@ -23,7 +32,16 @@
         <label for="text"> Add note: </label>
         <input type="text" onClick="(this.value='')" width="auto" name="input-text" placeholder="new note" #box />
         <button (click)="addNote(box.value)"> save note </button>
+
     </div>
+    <ng-template>
+        <label for="bold"> bold? </label>
+        <input type="checkbox" on="(this.value=true)" id="bold" name="bold" #boldMe>
+
+        <label for="underline"> underline? </label>
+        <input type="checkbox" onchange="(this.value=true)" this.id="underline" name="underline" #underlineMe>
+
+    </ng-template>
     <div>
         <label for="text"> Delete note: </label>
         <input type="text" onClick="(this.value='')" width="auto" name="delete-text" placeholder="note # to delete"
@@ -33,13 +51,22 @@
     </div>
 </div>
 
-<div name = "list" style="border: medium solid aquamarine; padding: 20px; ">
+<div name="list" style="border: medium solid aquamarine; padding: 20px; ">
     <h1>
         List:
     </h1>
-    <p *ngFor='let item of notes; let indexOfElement =index'>
-        {{(indexOfElement + 1) +") "}} {{item.noteText}}
 
-    <p>
-        <h2> </h2>
-</div>
+
+
+
+    <div>
+        <p *ngFor='let item of notes; let indexOfElement =index'>
+            {{(indexOfElement + 1) +") "}} {{item.noteText}}
+        </p>
+    </div>
+
+
+
+
+
+    <h2> </h2>

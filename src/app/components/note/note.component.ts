@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NoteItemComponent } from '../note-item/note-item.component';
+import { Observable, of } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-note',
@@ -11,6 +13,8 @@ export class NoteComponent {
   text: string = '';
   i: number = 0;
   introText: string = '';
+  isBold: boolean = false;
+  isUnderline: boolean = false;
 
   addNote(item: string) {
     let n = 0;
@@ -29,9 +33,7 @@ export class NoteComponent {
       this.notes[n] = note2;
 
     }
-
     item = "";
-
   }
 
   deleteNote(num: string) {
@@ -56,7 +58,6 @@ export class NoteComponent {
           this.notes[w].noteId--;
           w++;
         }
-
       }
       j++;
     }
@@ -64,8 +65,10 @@ export class NoteComponent {
 
   }
 
-  getText() {
-    this.notes.toString();
+ 
+  getText(): Observable<any> {
+    const no = of(this.notes);
+    return no;
   }
 }
 
