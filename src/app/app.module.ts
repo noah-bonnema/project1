@@ -8,6 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NoteItemComponent } from './components/note-item/note-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -23,7 +24,8 @@ import { NoteItemComponent } from './components/note-item/note-item.component';
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
